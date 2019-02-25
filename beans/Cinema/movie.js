@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
-var Schema   = mongoose.Schema({
+var Schema   = mongoose.Schema;
+var movie = new Schema({
 	NAME: String,
 	DURATIONMINUTES: Number,
 	GENRE: String,
@@ -231,4 +232,4 @@ var Schema   = mongoose.Schema({
 			STATE: Number
 		}
 });
-module.exports=mongoose.model('Movie',movie);
+module.exports=mongoose.model('Movie', movie);

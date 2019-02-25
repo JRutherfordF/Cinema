@@ -1,25 +1,25 @@
-var Item = require('./pelicula');
-module.exports = class _Pelicula {
+var Item = require('./movie');
+module.exports = class _Movie {
    constructor( ) {
 
    }
 Guardar(req,res) {
 	Item.create(
 			{
-  NOMBRE: req.body.NOMBRE,
-    DURACIONMINUTOS: req.body.DURACIONMINUTOS,
-    GENERO: req.body.GENERO,
-    IDIOMAAUDIO: req.body.IDIOMAAUDIO,
-    IDIOMASUB: req.body.IDIOMASUB,
-    SINOPSIS: req.body.SINOPSIS,
-    CLASIFICACION: req.body.CLASIFICACION,
-    PRECIO: req.body.PRECIO,
-    HORAINICIO: req.body.HORAINICIO,
-    FECHA: req.body.FECHA,
-    MINUTOINICIO: req.body.MINUTOINICIO,
-    ASIENTOS: req.body.ASIENTOS,
-    IMAGEN: req.body.IMAGEN,
-    ESTADO: req.body.ESTADO
+    NAME: req.body.NAME,
+    DURATIONMINUTES: req.body.DURATIONMINUTES,
+    GENRE: req.body.GENRE,
+    LANGUAGEAUDIO: req.body.LANGUAGEAUDIO,
+    LANGUAGESUBS: req.body.LANGUAGESUBS,
+    SYNOPSIS: req.body.SYNOPSIS,
+    RATING: req.body.RATING,
+    PRICE: req.body.PRICE,
+    HOURSTART: req.body.HOURSTART,
+    DATE: req.body.DATE,
+    MINUTESTART: req.body.MINUTESTART,
+    SEATS: req.body.SEATS,
+    IMAGE: req.body.IMAGE,
+    STATE: req.body.STATE
             }, 
 			function(err, item) {
 				if (err)
@@ -46,20 +46,20 @@ Guardar(req,res) {
 		Item.update( {_id : req.body.id},
 					{$set:
 			{
-   NOMBRE: req.body.NOMBRE,
-    DURACIONMINUTOS: req.body.DURACIONMINUTOS,
-    GENERO: req.body.GENERO,
-    IDIOMAAUDIO: req.body.IDIOMAAUDIO,
-    IDIOMASUB: req.body.IDIOMASUB,
-    SINOPSIS: req.body.SINOPSIS,
-    CLASIFICACION: req.body.CLASIFICACION,
-    PRECIO: req.body.PRECIO,
-    HORAINICIO: req.body.HORAINICIO,
-    FECHA: req.body.FECHA,
-    MINUTOINICIO: req.body.MINUTOINICIO,
-    ASIENTOS: req.body.ASIENTOS,
-    IMAGEN: req.body.IMAGEN,
-    ESTADO: req.body.ESTADO
+   NAME: req.body.NAME,
+    DURATIONMINUTES: req.body.DURATIONMINUTES,
+    GENRE: req.body.GENRE,
+    LANGUAGEAUDIO: req.body.LANGUAGEAUDIO,
+    LANGUAGESUBS: req.body.LANGUAGESUBS,
+    SYNOPSIS: req.body.SYNOPSIS,
+    RATING: req.body.RATING,
+    PRICE: req.body.PRICE,
+    HOURSTART: req.body.HOURSTART,
+    DATE: req.body.DATE,
+    MINUTESTART: req.body.MINUTESTART,
+    SEATS: req.body.SEATS,
+    IMAGE: req.body.IMAGE,
+    STATE: req.body.STATE
             }}, 
 			function(err, item) {
 				if (err)
@@ -125,7 +125,7 @@ Seleccionartodos(req,res) {
 }
     
     Seleccionarporfecha(req,res) {
-	Item.find({FECHA:req.body.FECHA}, function(err, item) {
+	Item.find({DATE:req.body.DATE}, function(err, item) {
 			if (err){
 				res.send(err)}
         else{
@@ -170,7 +170,7 @@ Seleccionartodos(req,res) {
 }
     
     Seleccionarpornombre(req,res) {
-	Item.find({NOMBRE:req.body.NOMBRE}, function(err, item) {
+	Item.find({NAME:req.body.NAME}, function(err, item) {
 			if (err){
 				res.send(err)}
         else{
