@@ -60,15 +60,18 @@
 			<td><button id="31">31</button></td>
 		</tr>
 		<tr>
-			<input type="text">
-			<input type="text">
+			<td colspan="5"><input type="" id="currmonth" placeholder="Mes"><input type="" id="curryear" placeholder="Año"></td>
+		</tr>
+		<tr>
 			<td colspan="5"><button>Cargar</button></td>
 		</tr>
 	</table>
 
 	<script type="text/javascript">
-		function agregaimgdepeliculaaldiv(imgenbase64,iddeldiv,iddelapelicula) //la funcion recive la imagenbas64, la id del div o el tf y la id de la peli { document.getElementById(iddeldiv).innerHTML += "<img src='"+imgenbase64+"' height='42' width='42' id= '"+iddelapelicula+"' onclick='cargataquilla('"+iddelapelicula+"')'>" }
-function cargarpeliculasdelmesyanno() //La funcion busca en la base de datos las peliculas que tengas el dia seleccionado y da la base 64 de la imagen { let clasepeliculainstanciada = new Pelicula(); clasepeliculainstanciada.peliculapormesyanno(document.getElementById("mesactual").value,document.getElementById("annoactual").value).then(function(response) {
+		function agregaimgdepeliculaaldiv(imgenbase64,iddeldiv,iddelapelicula) //la funcion recive la imagenbas64, la id del div o el tf y la id de la peli
+		 { document.getElementById(iddeldiv).innerHTML += "<img src='"+imgenbase64+"' height='42' width='42' id= '"+iddelapelicula+"' onclick='loadseats('"+iddelapelicula+"')'>" }
+function loadmoviesbydateandyear() //La funcion busca en la base de datos las peliculas que tengas el dia seleccionado y da la base 64 de la imagen 
+{ let clasepeliculainstanciada = new Movie(); clasepeliculainstanciada.moviesbydateandyear(document.getElementById("currmonth").value,document.getElementById("curryear").value).then(function(response) {
 for(var element in response) { var fechadelapeliculaactual = new Date(response[element].DATE); agregaimgdepeliculaaldiv(response[element].IMAGE,fechadelapeliculaactual.getDate() + 1,response[element]._id);
 }
 

@@ -9,6 +9,6 @@ module.exports = function(app){
 	app.post('/api/selectmoviebyid', classmovie.Seleccionarporid);
 	app.post('/api/selectmoviebyname', classmovie.Seleccionarpornombre);
 	app.get('*', function(req, res){
-		res.sendfile('./login.html');
+		res.sendfile('./loginp.html');
 	});
 }

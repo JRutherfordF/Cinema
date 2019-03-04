@@ -607,14 +607,8 @@ catch(err) {
             asientoH4.ID=null;
             asientos.H4= asientoH4;
             
-        function botonguardarclick()
-            {
+        function botonguardarclick(){
                 var peliculainstanciada = new _Movie(
-
-
-
-
-
                 0, //gets data from the html
                document.getElementById("name").value,
                document.getElementById("duration").value,
