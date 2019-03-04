@@ -4,7 +4,10 @@ module.exports = class _Movie {
 
    }
 Guardar(req,res) {
+
+ console.log(req);
 	Item.create(
+       
 			{
     NAME: req.body.NAME,
     DURATIONMINUTES: req.body.DURATIONMINUTES,
@@ -21,7 +24,7 @@ Guardar(req,res) {
     IMAGE: req.body.IMAGE,
     STATE: req.body.STATE
             }, 
-			function(err, item) {
+				function(err, item) {
 				if (err)
                     {
 					res.send(err);}
@@ -36,13 +39,11 @@ Guardar(req,res) {
                 
           }
                	
-			});
-    
-    
-    
+			}); 
 }
     
- Modificar(req,res) {
+    
+   Modificar(req,res) {
 		Item.update( {_id : req.body.id},
 					{$set:
 			{
@@ -191,4 +192,8 @@ Seleccionartodos(req,res) {
     
     
 }
+
+
+  
 }
+    

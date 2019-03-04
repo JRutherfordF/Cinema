@@ -1,7 +1,39 @@
      
             
     class _Movie {
-   constructor(_id, 
+      moviesbydateandyear(month,year)
+    {
+      var pack = this;
+      var filteredmovievector = [];
+      return new Promise(function(resolve, reject){
+        try{
+          var xhr = new XMLHttpRequest();
+          xhr.open('POST', 'http://localhost:8080/api/selectmovie');
+          xhr.setRequestHeader('Content-Type', 'application/json');
+          xhr.onload=function() {
+            if(xhr.status === 200){
+              var movies=JSON.parse(xhr.responseText);
+              for(var element in movies){
+                var moviedate=new Date(movies[element].DATE);
+                if((moviedate.getMonth()+1==month) &&(moviedate.getFullYear()==year)){
+              filteredmovievector.push(movies[element]);
+                }
+              }
+              resolve(filteredmovievector);
+            }
+            else{
+              reject(xhr);
+            }
+          };
+          xhr.send(JSON.stringify(pack));
+        }
+        catch(err){
+          reject(err.message);
+        }
+      });
+}
+   constructor(
+    _id, 
     NAME,
     DURATIONMINUTES,
     GENRE,
@@ -17,8 +49,8 @@
     IMAGE,
     STATE
             ) {
-       this._id=_id;
-this.NAME =NAME;
+    this._id = _id;
+    this.NAME = NAME;
     this.DURATIONMINUTES=DURATIONMINUTES;
     this.GENRE=GENRE;
     this.LANGUAGEAUDIO=LANGUAGEAUDIO;
@@ -34,7 +66,7 @@ this.NAME =NAME;
     this.STATE=STATE;
    }
 Guardar() {
-   var objetoaenviar = this;
+   var pack = this;
   // Return a new promise.
   return new Promise(function(resolve, reject) {
     // Do the usual XHR stuff
@@ -53,7 +85,7 @@ xhr.onload = function() {
            reject(xhr); 
         }
 };
-xhr.send(JSON.stringify(objetoaenviar));   
+xhr.send(JSON.stringify(pack));   
           
           
           
@@ -67,7 +99,7 @@ catch(err) {
     
  Modificar() {
 	
-       var objetoaenviar = this;
+       var pack = this;
   // Return a new promise.
   return new Promise(function(resolve, reject) {
     // Do the usual XHR stuff
@@ -86,7 +118,7 @@ xhr.onload = function() {
            reject(xhr); 
         }
 };
-xhr.send(JSON.stringify(objetoaenviar));   
+xhr.send(JSON.stringify(pack));   
           
           
           
@@ -102,7 +134,7 @@ catch(err) {
     
     Eliminar() {
 
-       var objetoaenviar = this;
+       var pack = this;
   // Return a new promise.
   return new Promise(function(resolve, reject) {
     // Do the usual XHR stuff
@@ -121,7 +153,7 @@ xhr.onload = function() {
            reject(xhr); 
         }
 };
-xhr.send(JSON.stringify(objetoaenviar));   
+xhr.send(JSON.stringify(pack));   
           
           
           
@@ -136,7 +168,7 @@ catch(err) {
 }
 Seleccionartodos() {
 	
-       var objetoaenviar = this;
+       var pack = this;
   // Return a new promise.
   return new Promise(function(resolve, reject) {
     // Do the usual XHR stuff
@@ -155,7 +187,7 @@ xhr.onload = function() {
            reject(xhr); 
         }
 };
-xhr.send(JSON.stringify(objetoaenviar));   
+xhr.send(JSON.stringify(pack));   
           
           
           
@@ -171,7 +203,7 @@ catch(err) {
     
     Seleccionarporfecha() {
 
-       var objetoaenviar = this;
+       var pack = this;
   // Return a new promise.
   return new Promise(function(resolve, reject) {
     // Do the usual XHR stuff
@@ -190,7 +222,7 @@ xhr.onload = function() {
            reject(xhr); 
         }
 };
-xhr.send(JSON.stringify(objetoaenviar));   
+xhr.send(JSON.stringify(pack));   
           
           
           
@@ -206,7 +238,7 @@ catch(err) {
     
     Seleccionarporid() {
 	
-      var objetoaenviar = this;
+      var pack = this;
   // Return a new promise.
   return new Promise(function(resolve, reject) {
     // Do the usual XHR stuff
@@ -225,7 +257,7 @@ xhr.onload = function() {
            reject(xhr); 
         }
 };
-xhr.send(JSON.stringify(objetoaenviar));   
+xhr.send(JSON.stringify(pack));   
           
           
           
@@ -242,7 +274,7 @@ catch(err) {
 
     
     
-      var objetoaenviar = this;
+      var pack = this;
   // Return a new promise.
   return new Promise(function(resolve, reject) {
     // Do the usual XHR stuff
@@ -261,11 +293,11 @@ xhr.onload = function() {
            reject(xhr); 
         }
 };
-xhr.send(JSON.stringify(objetoaenviar));   
+xhr.send(JSON.stringify(pack));   
           
           
           
-}
+}//err=error
 catch(err) {
      reject(err.message);
 
@@ -276,6 +308,7 @@ catch(err) {
 }
             
              let imagenenbase64 = "";
+
       $("#imgmovie").change(function(){
        readURL(this);
  });
@@ -299,7 +332,7 @@ catch(err) {
     
     
             
-            
+            //seat data
            var asientos = new Object();
         var asientoA1 = new Object();
             asientoA1.NAMESTUDENT = null;
@@ -576,7 +609,13 @@ catch(err) {
             
         function botonguardarclick()
             {
-                var peliculainstanciada = new _Movie(0,
+                var peliculainstanciada = new _Movie(
+
+
+
+
+
+                0, //gets data from the html
                document.getElementById("name").value,
                document.getElementById("duration").value,
                document.getElementById("genre").value,
@@ -584,9 +623,9 @@ catch(err) {
                document.getElementById("languagesub").value,
                document.getElementById("synopsis").value,
                document.getElementById("rating").value,
+                document.getElementById("hour").value,
+                  document.getElementById("date").value,
                document.getElementById("price").value,
-               document.getElementById("hour").value,
-               document.getElementById("date").value,
                document.getElementById("minute").value,
          asientos,
           imagenenbase64,
@@ -594,11 +633,11 @@ catch(err) {
                 );
                                                         
                 peliculainstanciada.Guardar().then(function(response) {
-  console.log("Success!", response);
+  console.log("Success!", response); //action complete
             alert("Guardado con exito");
               
 }, function(error) {
-  console.error("Failed!", error);
+  console.error("Failed!", error);  //process failure
              alert("Error " + error);
            
 });                                       

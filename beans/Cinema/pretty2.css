@@ -17,11 +17,17 @@ button{
 	background:  #f9e4b7;
 	font-size: 12pt;
 	color: #bf0010;
-	border-radius: 2px;
+	border-radius: 1px;
 	border:0;
+	transition:1s;
 }
 button:focus{
 	transition: 1s;
 	color: #f9e4b7;
-	background: #ae0000;
+	background: #9d0000;
+}
+button:hover{
+	transition: 1s;
+	color: #f9e4b7;
+	background: #bf0010;
 }

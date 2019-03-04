@@ -230,6 +230,8 @@ var movie = new Schema({
 			},
 			IMAGE: String,
 			STATE: Number
-		}
+		},
+    IMAGE:String,
+    STATE:String
 });
 module.exports=mongoose.model('Movie', movie);
