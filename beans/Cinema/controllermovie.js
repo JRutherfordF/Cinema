@@ -44,7 +44,7 @@ Guardar(req,res) {
     
     
    Modificar(req,res) {
-		Item.update( {_id : req.body.id},
+		Item.update( {_id : req.body._id},
 					{$set:
 			{
    NAME: req.body.NAME,
@@ -84,7 +84,7 @@ Guardar(req,res) {
 }   
     
     Eliminar(req,res) {
-	Item.remove({_id : req.body.id}, 
+	Item.remove({_id : req.body._id}, 
 			function(err, item) {
 				if (err)
                     {

@@ -334,7 +334,7 @@ catch(err) {
             
             //seat data
            var asientos = new Object();
-        var asientoA1 = new Object();
+            var asientoA1 = new Object();
             asientoA1.NAMESTUDENT = null;
             asientoA1.SECTION=null;
             asientoA1.ID=null;
