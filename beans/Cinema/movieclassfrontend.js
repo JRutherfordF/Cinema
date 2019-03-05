@@ -1,6 +1,4 @@
-     
-            
-    class _Movie {
+class _Movie {
       moviesbydateandyear(month,year)
     {
       var pack = this;
@@ -333,279 +331,279 @@ catch(err) {
     
             
             //seat data
-           var asientos = new Object();
-            var asientoA1 = new Object();
-            asientoA1.NAMESTUDENT = null;
-            asientoA1.SECTION=null;
-            asientoA1.ID=null;
-            asientos.A1= asientoA1;
+           var seats = new Object();
+            var seatA1 = new Object();
+            seatA1.NAMESTUDENT = null;
+            seatA1.SECTION=null;
+            seatA1.ID=null;
+            seats.A1= seatA1;
             
             
             
-             var asientoA2 = new Object();
-            asientoA2.NAMESTUDENT = null;
-            asientoA2.SECTION=null;
-            asientoA2.ID=null;
-            asientos.A2= asientoA2;
+             var seatA2 = new Object();
+            seatA2.NAMESTUDENT = null;
+            seatA2.SECTION=null;
+            seatA2.ID=null;
+            seats.A2= seatA2;
              
-             var asientoA3 = new Object();
-            asientoA3.NAMESTUDENT = null;
-            asientoA3.SECTION=null;
-            asientoA3.ID=null;
-            asientos.A3= asientoA3;
+             var seatA3 = new Object();
+            seatA3.NAMESTUDENT = null;
+            seatA3.SECTION=null;
+            seatA3.ID=null;
+            seats.A3= seatA3;
             
             
             
-             var asientoA4 = new Object();
-            asientoA4.NAMESTUDENT = null;
-            asientoA4.SECTION=null;
-            asientoA4.ID=null;
-            asientos.A4= asientoA4;
+             var seatA4 = new Object();
+            seatA4.NAMESTUDENT = null;
+            seatA4.SECTION=null;
+            seatA4.ID=null;
+            seats.A4= seatA4;
             
-            var asientoA5 = new Object();
-            asientoA5.NAMESTUDENT = null;
-            asientoA5.SECTION=null;
-            asientoA5.ID=null;
-            asientos.A5= asientoA5;
+            var seatA5 = new Object();
+            seatA5.NAMESTUDENT = null;
+            seatA5.SECTION=null;
+            seatA5.ID=null;
+            seats.A5= seatA5;
             
             
             
-             var asientoA6 = new Object();
-            asientoA2.NAMESTUDENT = null;
-            asientoA2.SECTION=null;
-            asientoA2.ID=null;
-            asientos.A6= asientoA6;
+             var seatA6 = new Object();
+            seatA2.NAMESTUDENT = null;
+            seatA2.SECTION=null;
+            seatA2.ID=null;
+            seats.A6= seatA6;
 
-            var asientoB1 = new Object();
-            asientoB1.NAMESTUDENT = null;
-            asientoB1.SECTION=null;
-            asientoB1.ID=null;
-            asientos.B1= asientoB1;
+            var seatB1 = new Object();
+            seatB1.NAMESTUDENT = null;
+            seatB1.SECTION=null;
+            seatB1.ID=null;
+            seats.B1= seatB1;
             
             
             
-             var asientoB2 = new Object();
-            asientoB2.NAMESTUDENT = null;
-            asientoB2.SECTION=null;
-            asientoB2.ID=null;
-            asientos.B2= asientoB2;
+             var seatB2 = new Object();
+            seatB2.NAMESTUDENT = null;
+            seatB2.SECTION=null;
+            seatB2.ID=null;
+            seats.B2= seatB2;
 
-            var asientoB3 = new Object();
-            asientoB3.NAMESTUDENT = null;
-            asientoB3.SECTION=null;
-            asientoB3.ID=null;
-            asientos.B3= asientoB3;
+            var seatB3 = new Object();
+            seatB3.NAMESTUDENT = null;
+            seatB3.SECTION=null;
+            seatB3.ID=null;
+            seats.B3= seatB3;
             
             
             
-             var asientoB4 = new Object();
-            asientoB4.NAMESTUDENT = null;
-            asientoB4.SECTION=null;
-            asientoB4.ID=null;
-            asientos.B4= asientoB4;
+             var seatB4 = new Object();
+            seatB4.NAMESTUDENT = null;
+            seatB4.SECTION=null;
+            seatB4.ID=null;
+            seats.B4= seatB4;
 
-            var asientoB5 = new Object();
-            asientoB5.NAMESTUDENT = null;
-            asientoB5.SECTION=null;
-            asientoB5.ID=null;
-            asientos.B5= asientoB5;
+            var seatB5 = new Object();
+            seatB5.NAMESTUDENT = null;
+            seatB5.SECTION=null;
+            seatB5.ID=null;
+            seats.B5= seatB5;
             
             
             
-             var asientoB6 = new Object();
-            asientoB6.NAMESTUDENT = null;
-            asientoB6.SECTION=null;
-            asientoB6.ID=null;
-            asientos.B6= asientoB6;
+             var seatB6 = new Object();
+            seatB6.NAMESTUDENT = null;
+            seatB6.SECTION=null;
+            seatB6.ID=null;
+            seats.B6= seatB6;
 
-            var asientoC1 = new Object();
-            asientoC1.NAMESTUDENT = null;
-            asientoC1.SECTION=null;
-            asientoC1.ID=null;
-            asientos.C1= asientoC1;
+            var seatC1 = new Object();
+            seatC1.NAMESTUDENT = null;
+            seatC1.SECTION=null;
+            seatC1.ID=null;
+            seats.C1= seatC1;
             
             
             
-             var asientoC2 = new Object();
-            asientoC2.NAMESTUDENT = null;
-            asientoC2.SECTION=null;
-            asientoC2.ID=null;
-            asientos.C2= asientoC2;
+             var seatC2 = new Object();
+            seatC2.NAMESTUDENT = null;
+            seatC2.SECTION=null;
+            seatC2.ID=null;
+            seats.C2= seatC2;
              
-             var asientoC3 = new Object();
-            asientoC3.NAMESTUDENT = null;
-            asientoC3.SECTION=null;
-            asientoC3.ID=null;
-            asientos.C3= asientoC3;
+             var seatC3 = new Object();
+            seatC3.NAMESTUDENT = null;
+            seatC3.SECTION=null;
+            seatC3.ID=null;
+            seats.C3= seatC3;
             
             
             
-             var asientoC4 = new Object();
-            asientoC4.NAMESTUDENT = null;
-            asientoC4.SECTION=null;
-            asientoC4.ID=null;
-            asientos.C4= asientoC4;
+             var seatC4 = new Object();
+            seatC4.NAMESTUDENT = null;
+            seatC4.SECTION=null;
+            seatC4.ID=null;
+            seats.C4= seatC4;
             
-            var asientoC5 = new Object();
-            asientoC5.NAMESTUDENT = null;
-            asientoC5.SECTION=null;
-            asientoC5.ID=null;
-            asientos.C5= asientoC5;
+            var seatC5 = new Object();
+            seatC5.NAMESTUDENT = null;
+            seatC5.SECTION=null;
+            seatC5.ID=null;
+            seats.C5= seatC5;
             
             
             
-             var asientoC6 = new Object();
-            asientoC2.NAMESTUDENT = null;
-            asientoC2.SECTION=null;
-            asientoC2.ID=null;
-            asientos.C6= asientoC6;
+             var seatC6 = new Object();
+            seatC2.NAMESTUDENT = null;
+            seatC2.SECTION=null;
+            seatC2.ID=null;
+            seats.C6= seatC6;
 
-            var asientoD1 = new Object();
-            asientoD1.NAMESTUDENT = null;
-            asientoD1.SECTION=null;
-            asientoD1.ID=null;
-            asientos.D1= asientoD1;
+            var seatD1 = new Object();
+            seatD1.NAMESTUDENT = null;
+            seatD1.SECTION=null;
+            seatD1.ID=null;
+            seats.D1= seatD1;
             
             
             
-             var asientoD2 = new Object();
-            asientoD2.NAMESTUDENT = null;
-            asientoD2.SECTION=null;
-            asientoD2.ID=null;
-            asientos.D2= asientoD2;
+             var seatD2 = new Object();
+            seatD2.NAMESTUDENT = null;
+            seatD2.SECTION=null;
+            seatD2.ID=null;
+            seats.D2= seatD2;
 
-            var asientoD3 = new Object();
-            asientoD3.NAMESTUDENT = null;
-            asientoD3.SECTION=null;
-            asientoD3.ID=null;
-            asientos.D3= asientoD3;
+            var seatD3 = new Object();
+            seatD3.NAMESTUDENT = null;
+            seatD3.SECTION=null;
+            seatD3.ID=null;
+            seats.D3= seatD3;
             
             
             
-             var asientoD4 = new Object();
-            asientoD4.NAMESTUDENT = null;
-            asientoD4.SECTION=null;
-            asientoD4.ID=null;
-            asientos.D4= asientoD4;
+             var seatD4 = new Object();
+            seatD4.NAMESTUDENT = null;
+            seatD4.SECTION=null;
+            seatD4.ID=null;
+            seats.D4= seatD4;
 
-            var asientoD5 = new Object();
-            asientoD5.NAMESTUDENT = null;
-            asientoD5.SECTION=null;
-            asientoD5.ID=null;
-            asientos.D5= asientoD5;
+            var seatD5 = new Object();
+            seatD5.NAMESTUDENT = null;
+            seatD5.SECTION=null;
+            seatD5.ID=null;
+            seats.D5= seatD5;
             
             
-            var asientoE1 = new Object();
-            asientoE1.NAMESTUDENT = null;
-            asientoE1.SECTION=null;
-            asientoE1.ID=null;
-            asientos.E1= asientoE1;
+            var seatE1 = new Object();
+            seatE1.NAMESTUDENT = null;
+            seatE1.SECTION=null;
+            seatE1.ID=null;
+            seats.E1= seatE1;
             
             
             
-             var asientoE2 = new Object();
-            asientoE2.NAMESTUDENT = null;
-            asientoE2.SECTION=null;
-            asientoE2.ID=null;
-            asientos.E2= asientoE2;
+             var seatE2 = new Object();
+            seatE2.NAMESTUDENT = null;
+            seatE2.SECTION=null;
+            seatE2.ID=null;
+            seats.E2= seatE2;
 
-            var asientoE3 = new Object();
-            asientoE3.NAMESTUDENT = null;
-            asientoE3.SECTION=null;
-            asientoE3.ID=null;
-            asientos.E3= asientoE3;
+            var seatE3 = new Object();
+            seatE3.NAMESTUDENT = null;
+            seatE3.SECTION=null;
+            seatE3.ID=null;
+            seats.E3= seatE3;
             
             
             
-             var asientoE4 = new Object();
-            asientoE4.NAMESTUDENT = null;
-            asientoE4.SECTION=null;
-            asientoE4.ID=null;
-            asientos.E4= asientoE4;
+             var seatE4 = new Object();
+            seatE4.NAMESTUDENT = null;
+            seatE4.SECTION=null;
+            seatE4.ID=null;
+            seats.E4= seatE4;
 
-            var asientoF1 = new Object();
-            asientoF1.NAMESTUDENT = null;
-            asientoF1.SECTION=null;
-            asientoF1.ID=null;
-            asientos.F1= asientoF1;
+            var seatF1 = new Object();
+            seatF1.NAMESTUDENT = null;
+            seatF1.SECTION=null;
+            seatF1.ID=null;
+            seats.F1= seatF1;
             
             
             
-             var asientoF2 = new Object();
-            asientoF2.NAMESTUDENT = null;
-            asientoF2.SECTION=null;
-            asientoF2.ID=null;
-            asientos.F2= asientoF2;
+             var seatF2 = new Object();
+            seatF2.NAMESTUDENT = null;
+            seatF2.SECTION=null;
+            seatF2.ID=null;
+            seats.F2= seatF2;
 
-            var asientoF3 = new Object();
-            asientoF3.NAMESTUDENT = null;
-            asientoF3.SECTION=null;
-            asientoF3.ID=null;
-            asientos.F3= asientoF3;
+            var seatF3 = new Object();
+            seatF3.NAMESTUDENT = null;
+            seatF3.SECTION=null;
+            seatF3.ID=null;
+            seats.F3= seatF3;
             
             
             
-             var asientoF4 = new Object();
-            asientoF4.NAMESTUDENT = null;
-            asientoF4.SECTION=null;
-            asientoF4.ID=null;
-            asientos.F4= asientoF4;
+             var seatF4 = new Object();
+            seatF4.NAMESTUDENT = null;
+            seatF4.SECTION=null;
+            seatF4.ID=null;
+            seats.F4= seatF4;
 
-            var asientoE1 = new Object();
-            asientoE1.NAMESTUDENT = null;
-            asientoE1.SECTION=null;
-            asientoE1.ID=null;
-            asientos.E1= asientoD1;
+            var seatE1 = new Object();
+            seatE1.NAMESTUDENT = null;
+            seatE1.SECTION=null;
+            seatE1.ID=null;
+            seats.E1= seatD1;
             
             
             
-             var asientoG2 = new Object();
-            asientoG2.NAMESTUDENT = null;
-            asientoG2.SECTION=null;
-            asientoG2.ID=null;
-            asientos.G2= asientoG2;
+             var seatG2 = new Object();
+            seatG2.NAMESTUDENT = null;
+            seatG2.SECTION=null;
+            seatG2.ID=null;
+            seats.G2= seatG2;
 
-            var asientoG3 = new Object();
-            asientoG3.NAMESTUDENT = null;
-            asientoG3.SECTION=null;
-            asientoG3.ID=null;
-            asientos.G3= asientoG3;
+            var seatG3 = new Object();
+            seatG3.NAMESTUDENT = null;
+            seatG3.SECTION=null;
+            seatG3.ID=null;
+            seats.G3= seatG3;
             
             
             
-             var asientoG4 = new Object();
-            asientoG4.NAMESTUDENT = null;
-            asientoG4.SECTION=null;
-            asientoG4.ID=null;
-            asientos.G4= asientoG4;
+             var seatG4 = new Object();
+            seatG4.NAMESTUDENT = null;
+            seatG4.SECTION=null;
+            seatG4.ID=null;
+            seats.G4= seatG4;
 
-            var asientoH1 = new Object();
-            asientoH1.NAMESTUDENT = null;
-            asientoH1.SECTION=null;
-            asientoH1.ID=null;
-            asientos.H1= asientoH1;
+            var seatH1 = new Object();
+            seatH1.NAMESTUDENT = null;
+            seatH1.SECTION=null;
+            seatH1.ID=null;
+            seats.H1= seatH1;
             
             
             
-             var asientoH2 = new Object();
-            asientoH2.NAMESTUDENT = null;
-            asientoH2.SECTION=null;
-            asientoH2.ID=null;
-            asientos.H2= asientoH2;
+             var seatH2 = new Object();
+            seatH2.NAMESTUDENT = null;
+            seatH2.SECTION=null;
+            seatH2.ID=null;
+            seats.H2= seatH2;
 
-            var asientoH3 = new Object();
-            asientoH3.NAMESTUDENT = null;
-            asientoH3.SECTION=null;
-            asientoH3.ID=null;
-            asientos.H3= asientoH3;
+            var seatH3 = new Object();
+            seatH3.NAMESTUDENT = null;
+            seatH3.SECTION=null;
+            seatH3.ID=null;
+            seats.H3= seatH3;
             
             
             
-             var asientoH4 = new Object();
-            asientoH4.NAMESTUDENT = null;
-            asientoH4.SECTION=null;
-            asientoH4.ID=null;
-            asientos.H4= asientoH4;
+             var seatH4 = new Object();
+            seatH4.NAMESTUDENT = null;
+            seatH4.SECTION=null;
+            seatH4.ID=null;
+            seats.H4= seatH4;
             
         function botonguardarclick(){
                 var peliculainstanciada = new _Movie(
@@ -621,7 +619,7 @@ catch(err) {
                   document.getElementById("date").value,
                document.getElementById("price").value,
                document.getElementById("minute").value,
-         asientos,
+         seats,
           imagenenbase64,
          document.getElementById("state").value
                 );
