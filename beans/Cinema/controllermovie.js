@@ -44,6 +44,8 @@ Guardar(req,res) {
     
     
    Modificar(req,res) {
+    console.log(req.body.SEATS)
+    console.log(req.body._id)
 		Item.update( {_id : req.body._id},
 					{$set:
 			{

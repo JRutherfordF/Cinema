@@ -6,8 +6,10 @@
 	<link rel="stylesheet" type="text/css" href="pretty3.css">
   <script src="jquery-3.2.1.min.js"></script>
 </head>
-<body>
+<body onload="alcargar()">
 	<div align="center">
+<div id="datosdelapelicula"></div>
+
 		<table align="center">
 			<tr>
 				<td><button id="H1" onclick="pop(this.id)">H1</button></td>
@@ -71,6 +73,14 @@
 		</table>
 	</div>
     <script>
+
+function alcargar()
+{
+  var peliculaseleccionada = JSON.parse(localStorage.getItem("peliculaseleccionada"))
+
+  document.getElementById("datosdelapelicula").innerHTML= "Nombre de la pelicula: " + peliculaseleccionada[0].NAME + "<hr> Inicia: " + peliculaseleccionada[0].HOURSTART + " del dia: " + peliculaseleccionada[0].DATE
+}
+
         var clk;
         var txt;
         var person;
@@ -95,188 +105,196 @@
               alert(txt);
           }
           else{
+
+guardaralbe();
+
               alert("Asiento "+clk+" reservado")
           }
   }
       
 }
+
+function guardaralbe()
+{
+
 var peliculaencache = JSON.parse(localStorage.getItem('peliculaseleccionada')) 
 switch(clk){ 
-    case "A1": peliculaencache[0].SEATS.A1.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.A1.ID= carne.value; 
-               peliculaencache[0].SEATS.A1.SECTION= sect.value; 
+    case "A1": peliculaencache[0].SEATS.A1.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.A1.ID= carne; 
+               peliculaencache[0].SEATS.A1.SECTION= sect; 
         break;
-    case "A2": peliculaencache[0].SEATS.A2.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.A2.ID= carne.value; 
-               peliculaencache[0].SEATS.A2.SECTION= sect.value; 
+    case "A2": peliculaencache[0].SEATS.A2.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.A2.ID= carne; 
+               peliculaencache[0].SEATS.A2.SECTION= sect; 
         break;
-    case "A3": peliculaencache[0].SEATS.A3.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.A3.ID= carne.value; 
-               peliculaencache[0].SEATS.A3.SECTION= sect.value; 
+    case "A3": peliculaencache[0].SEATS.A3.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.A3.ID= carne; 
+               peliculaencache[0].SEATS.A3.SECTION= sect; 
         break;
-    case "A4": peliculaencache[0].SEATS.A4.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.A4.ID= carne.value; 
-               peliculaencache[0].SEATS.A4.SECTION= sect.value; 
+    case "A4": peliculaencache[0].SEATS.A4.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.A4.ID= carne; 
+               peliculaencache[0].SEATS.A4.SECTION= sect; 
         break;
-    case "A5": peliculaencache[0].SEATS.A5.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.A5.ID= carne.value; 
-               peliculaencache[0].SEATS.A5.SECTION= sect.value; 
+    case "A5": peliculaencache[0].SEATS.A5.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.A5.ID= carne; 
+               peliculaencache[0].SEATS.A5.SECTION= sect; 
         break;
-    case "A6": peliculaencache[0].SEATS.A6.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.A6.ID= carne.value; 
-               peliculaencache[0].SEATS.A6.SECTION= sect.value; 
-        break;
-        
-    case "B1": peliculaencache[0].SEATS.B1.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.B1.ID= carne.value; 
-               peliculaencache[0].SEATS.B1.SECTION= sect.value; 
-        break;
-    case "B2": peliculaencache[0].SEATS.B2.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.B2.ID= carne.value; 
-               peliculaencache[0].SEATS.B2.SECTION= sect.value; 
-        break;
-    case "B3": peliculaencache[0].SEATS.B3.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.B3.ID= carne.value; 
-               peliculaencache[0].SEATS.B3.SECTION= sect.value; 
-        break;
-    case "B4": peliculaencache[0].SEATS.B4.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.B4.ID= carne.value; 
-               peliculaencache[0].SEATS.B4.SECTION= sect.value; 
-        break;
-    case "B5": peliculaencache[0].SEATS.B5.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.B5.ID= carne.value; 
-               peliculaencache[0].SEATS.B5.SECTION= sect.value; 
-        break;
-    case "B6": peliculaencache[0].SEATS.B6.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.B6.ID= carne.value; 
-               peliculaencache[0].SEATS.B6.SECTION= sect.value; 
+    case "A6": peliculaencache[0].SEATS.A6.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.A6.ID= carne; 
+               peliculaencache[0].SEATS.A6.SECTION= sect; 
         break;
         
-    case "C1": peliculaencache[0].SEATS.C1.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.C1.ID= carne.value; 
-               peliculaencache[0].SEATS.C1.SECTION= sect.value; 
+    case "B1": peliculaencache[0].SEATS.B1.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.B1.ID= carne; 
+               peliculaencache[0].SEATS.B1.SECTION= sect; 
         break;
-    case "C2": peliculaencache[0].SEATS.C2.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.C2.ID= carne.value; 
-               peliculaencache[0].SEATS.C2.SECTION= sect.value; 
+    case "B2": peliculaencache[0].SEATS.B2.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.B2.ID= carne; 
+               peliculaencache[0].SEATS.B2.SECTION= sect; 
         break;
-    case "C3": peliculaencache[0].SEATS.C3.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.C3.ID= carne.value; 
-               peliculaencache[0].SEATS.C3.SECTION= sect.value; 
+    case "B3": peliculaencache[0].SEATS.B3.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.B3.ID= carne; 
+               peliculaencache[0].SEATS.B3.SECTION= sect; 
         break;
-    case "C4": peliculaencache[0].SEATS.C4.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.C4.ID= carne.value; 
-               peliculaencache[0].SEATS.C4.SECTION= sect.value; 
+    case "B4": peliculaencache[0].SEATS.B4.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.B4.ID= carne; 
+               peliculaencache[0].SEATS.B4.SECTION= sect; 
         break;
-    case "C5": peliculaencache[0].SEATS.C5.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.C5.ID= carne.value; 
-               peliculaencache[0].SEATS.C5.SECTION= sect.value; 
+    case "B5": peliculaencache[0].SEATS.B5.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.B5.ID= carne; 
+               peliculaencache[0].SEATS.B5.SECTION= sect; 
         break;
-    case "C6": peliculaencache[0].SEATS.C6.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.C6.ID= carne.value; 
-               peliculaencache[0].SEATS.C6.SECTION= sect.value; 
+    case "B6": peliculaencache[0].SEATS.B6.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.B6.ID= carne; 
+               peliculaencache[0].SEATS.B6.SECTION= sect; 
         break;
         
-    case "D1": peliculaencache[0].SEATS.D1.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.D1.ID= carne.value; 
-               peliculaencache[0].SEATS.D1.SECTION= sect.value; 
+    case "C1": peliculaencache[0].SEATS.C1.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.C1.ID= carne; 
+               peliculaencache[0].SEATS.C1.SECTION= sect; 
         break;
-    case "D2": peliculaencache[0].SEATS.D2.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.D2.ID= carne.value; 
-               peliculaencache[0].SEATS.D2.SECTION= sect.value; 
+    case "C2": peliculaencache[0].SEATS.C2.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.C2.ID= carne; 
+               peliculaencache[0].SEATS.C2.SECTION= sect; 
         break;
-    case "D3": peliculaencache[0].SEATS.D3.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.D3.ID= carne.value; 
-               peliculaencache[0].SEATS.D3.SECTION= sect.value; 
+    case "C3": peliculaencache[0].SEATS.C3.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.C3.ID= carne; 
+               peliculaencache[0].SEATS.C3.SECTION= sect; 
         break;
-    case "D4": peliculaencache[0].SEATS.D4.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.D4.ID= carne.value; 
-               peliculaencache[0].SEATS.D4.SECTION= sect.value; 
+    case "C4": peliculaencache[0].SEATS.C4.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.C4.ID= carne; 
+               peliculaencache[0].SEATS.C4.SECTION= sect; 
         break;
-    case "D5": peliculaencache[0].SEATS.D5.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.D5.ID= carne.value; 
-               peliculaencache[0].SEATS.D5.SECTION= sect.value; 
+    case "C5": peliculaencache[0].SEATS.C5.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.C5.ID= carne; 
+               peliculaencache[0].SEATS.C5.SECTION= sect; 
+        break;
+    case "C6": peliculaencache[0].SEATS.C6.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.C6.ID= carne; 
+               peliculaencache[0].SEATS.C6.SECTION= sect; 
+        break;
+        
+    case "D1": peliculaencache[0].SEATS.D1.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.D1.ID= carne; 
+               peliculaencache[0].SEATS.D1.SECTION= sect; 
+        break;
+    case "D2": peliculaencache[0].SEATS.D2.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.D2.ID= carne; 
+               peliculaencache[0].SEATS.D2.SECTION= sect; 
+        break;
+    case "D3": peliculaencache[0].SEATS.D3.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.D3.ID= carne; 
+               peliculaencache[0].SEATS.D3.SECTION= sect; 
+        break;
+    case "D4": peliculaencache[0].SEATS.D4.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.D4.ID= carne; 
+               peliculaencache[0].SEATS.D4.SECTION= sect; 
+        break;
+    case "D5": peliculaencache[0].SEATS.D5.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.D5.ID= carne; 
+               peliculaencache[0].SEATS.D5.SECTION= sect; 
         break;
  
-    case "E1": peliculaencache[0].SEATS.E1.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.E1.ID= carne.value; 
-               peliculaencache[0].SEATS.E1.SECTION= sect.value; 
+    case "E1": peliculaencache[0].SEATS.E1.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.E1.ID= carne; 
+               peliculaencache[0].SEATS.E1.SECTION= sect; 
         break;
-    case "E2": peliculaencache[0].SEATS.E2.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.E2.ID= carne.value; 
-               peliculaencache[0].SEATS.E2.SECTION= sect.value; 
+    case "E2": peliculaencache[0].SEATS.E2.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.E2.ID= carne; 
+               peliculaencache[0].SEATS.E2.SECTION= sect; 
         break;
-    case "E3": peliculaencache[0].SEATS.E3.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.E3.ID= carne.value; 
-               peliculaencache[0].SEATS.E3.SECTION= sect.value; 
+    case "E3": peliculaencache[0].SEATS.E3.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.E3.ID= carne; 
+               peliculaencache[0].SEATS.E3.SECTION= sect; 
         break;
-    case "E4": peliculaencache[0].SEATS.E4.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.E4.ID= carne.value; 
-               peliculaencache[0].SEATS.E4.SECTION= sect.value; 
+    case "E4": peliculaencache[0].SEATS.E4.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.E4.ID= carne; 
+               peliculaencache[0].SEATS.E4.SECTION= sect; 
         break;
     
-    case "F1": peliculaencache[0].SEATS.F1.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.F1.ID= carne.value; 
-               peliculaencache[0].SEATS.F1.SECTION= sect.value; 
+    case "F1": peliculaencache[0].SEATS.F1.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.F1.ID= carne; 
+               peliculaencache[0].SEATS.F1.SECTION= sect; 
         break;
-    case "F2": peliculaencache[0].SEATS.F2.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.F2.ID= carne.value; 
-               peliculaencache[0].SEATS.F2.SECTION= sect.value; 
+    case "F2": peliculaencache[0].SEATS.F2.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.F2.ID= carne; 
+               peliculaencache[0].SEATS.F2.SECTION= sect; 
         break;
-    case "F3": peliculaencache[0].SEATS.F3.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.F3.ID= carne.value; 
-               peliculaencache[0].SEATS.F3.SECTION= sect.value; 
+    case "F3": peliculaencache[0].SEATS.F3.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.F3.ID= carne; 
+               peliculaencache[0].SEATS.F3.SECTION= sect; 
         break;
-    case "F4": peliculaencache[0].SEATS.F4.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.F4.ID= carne.value; 
-               peliculaencache[0].SEATS.F4.SECTION= sect.value; 
-        break;
-        
-    case "G1": peliculaencache[0].SEATS.G1.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.G1.ID= carne.value; 
-               peliculaencache[0].SEATS.G1.SECTION= sect.value; 
-        break;
-    case "G2": peliculaencache[0].SEATS.G2.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.G2.ID= carne.value; 
-               peliculaencache[0].SEATS.G2.SECTION= sect.value; 
-        break;
-    case "G3": peliculaencache[0].SEATS.G3.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.G3.ID= carne.value; 
-               peliculaencache[0].SEATS.G3.SECTION= sect.value; 
-        break;
-    case "G4": peliculaencache[0].SEATS.G4.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.G4.ID= carne.value; 
-               peliculaencache[0].SEATS.G4.SECTION= sect.value; 
+    case "F4": peliculaencache[0].SEATS.F4.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.F4.ID= carne; 
+               peliculaencache[0].SEATS.F4.SECTION= sect; 
         break;
         
-    case "H1": peliculaencache[0].SEATS.H1.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.H1.ID= carne.value; 
-               peliculaencache[0].SEATS.H1.SECTION= sect.value; 
+    case "G1": peliculaencache[0].SEATS.G1.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.G1.ID= carne; 
+               peliculaencache[0].SEATS.G1.SECTION= sect; 
         break;
-    case "H2": peliculaencache[0].SEATS.H2.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.H2.ID= carne.value; 
-               peliculaencache[0].SEATS.H2.SECTION= sect.value; 
+    case "G2": peliculaencache[0].SEATS.G2.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.G2.ID= carne; 
+               peliculaencache[0].SEATS.G2.SECTION= sect; 
         break;
-    case "H3": peliculaencache[0].SEATS.H3.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.H3.ID= carne.value; 
-               peliculaencache[0].SEATS.H3.SECTION= sect.value; 
+    case "G3": peliculaencache[0].SEATS.G3.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.G3.ID= carne; 
+               peliculaencache[0].SEATS.G3.SECTION= sect; 
         break;
-    case "H4": peliculaencache[0].SEATS.H4.NAMESTUDENT= person.value; 
-               peliculaencache[0].SEATS.H4.ID= carne.value; 
-               peliculaencache[0].SEATS.H4.SECTION= sect.value; 
+    case "G4": peliculaencache[0].SEATS.G4.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.G4.ID= carne; 
+               peliculaencache[0].SEATS.G4.SECTION= sect; 
         break;
-        document.write(peliculaencache[0].NAME);
-}
-var peliculainstanciada = new _Movie(peliculaencache[0]._id,peliculaencache.NAME[0],
+        
+    case "H1": peliculaencache[0].SEATS.H1.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.H1.ID= carne; 
+               peliculaencache[0].SEATS.H1.SECTION= sect; 
+        break;
+    case "H2": peliculaencache[0].SEATS.H2.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.H2.ID= carne; 
+               peliculaencache[0].SEATS.H2.SECTION= sect; 
+        break;
+    case "H3": peliculaencache[0].SEATS.H3.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.H3.ID= carne; 
+               peliculaencache[0].SEATS.H3.SECTION= sect; 
+        break;
+    case "H4": peliculaencache[0].SEATS.H4.NAMESTUDENT= person; 
+               peliculaencache[0].SEATS.H4.ID= carne; 
+               peliculaencache[0].SEATS.H4.SECTION= sect; 
+        break;
+      }
+var peliculainstanciada = new _Movie(
+  peliculaencache[0]._id,
+  peliculaencache[0].NAME,
     peliculaencache[0].DURATIONMINUTES,
     peliculaencache[0].GENRE,
     peliculaencache[0].LANGUAGEAUDIO,
     peliculaencache[0].LANGUAGESUB,
     peliculaencache[0].SYNOPSIS,
     peliculaencache[0].RATING,
-    peliculaencache[0].PRICE,
     peliculaencache[0].HOURSTART,
     peliculaencache[0].DATE,
+    peliculaencache[0].PRICE,
     peliculaencache[0].MINUTESTART,
     peliculaencache[0].SEATS,
     peliculaencache[0].IMAGE,
@@ -293,6 +311,8 @@ var peliculainstanciada = new _Movie(peliculaencache[0]._id,peliculaencache.NAME
              alert("Error " + error);
             
 });
+
+  }
         }
     </script>
     <script src="movieclassfrontend.js"></script>    
