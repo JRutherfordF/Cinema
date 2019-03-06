@@ -15,6 +15,8 @@ module.exports = function(app) {
 	app.post('/api/selectmoviebyname', classmovie.Seleccionarpornombre);
     
 
+    //
+
     
    
 	app.get('*', function(req, res) {//localhost:8080
